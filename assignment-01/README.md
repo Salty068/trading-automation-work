@@ -82,3 +82,15 @@ Your work will be reviewed, and feedback will be provided on your pull request.
 
 Good luck, and remember: consistency is key to growth in software engineering!
 hey there
+
+**Submission**:
+
+def detect_signal_flip(current_signal: float, previous_signal: float) -> str:
+    if current_signal < 0 and previous_signal > 0:
+        return "SIGNAL HAS FLIPPED FROM BUY TO SELL"
+    elif current_signal > 0 and previous_signal < 0:
+        return "SIGNAL HAS FLIPPED FROM SELL TO BUY"
+    else:
+        return ""
+        
+    

@@ -93,4 +93,19 @@ def detect_signal_flip(current_signal: float, previous_signal: float) -> str:
     else:
         return ""
         
-    
+from twilio.rest import Client
+
+# Your Account SID and Auth Token from console.twipip lio.com
+account_sid = "AC520a857ae61fbf53a25c6851ed55a4c4"
+auth_token  = "4b0061a8bf1f61368a036abbd31999e4"
+
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+    to="+3133293543",
+    from_="+18667613308",
+    body="Hello from Python!")
+
+print(message.sid)
+
+
